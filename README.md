@@ -5,6 +5,13 @@ After deploying your application to server just run this tool to create systemd 
 
 <b>Interactive CLI configurator is under development</b>
 
+## Installation
+```bash
+git clone https://github.com/CaCTuCaTu4ECKuu/systemd-net
+cd systemd-net
+chmod +x ./src/bin/systemd-net.py
+```
+
 ## Usage
 Check `--help` to see avaliable parameters
 ```bash
