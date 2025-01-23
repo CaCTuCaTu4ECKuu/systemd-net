@@ -65,3 +65,9 @@ def do_enable_service(service_name:str):
 
 def do_disable_service(service_name:str):
     subprocess.run(["systemctl", "disable", service_name])
+
+def do_start_service(service_name:str):
+    subprocess.run(["systemctl", "start", service_name])
+
+def do_stop_service(service_name:str):
+    subprocess.run(["systemctl", "stop", service_name])
