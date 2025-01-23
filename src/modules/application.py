@@ -32,8 +32,9 @@ def handle_command(args:argparse.Namespace):
         if svc.get_service_active() == 'active' and not args.force:
             print(f"{COLOR_DANGER}Service is currently active. Use --force to stop and delete service.{COLOR_BASE}")
             exit(1)
-        print(f"{COLOR_SUCCESS}Service '{svc.Name}' deleted from systemd{COLOR_BASE}")
+        print(f"Deleting service '{svc.Name}' from systemd...")
         delete_service(svc_path)
+        print(f"{COLOR_SUCCESS}Service '{svc.Name}' deleted from systemd{COLOR_BASE}")
         exit(1)
 
     # Register net service

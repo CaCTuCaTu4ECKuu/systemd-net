@@ -249,6 +249,8 @@ def delete_service(svc_path:str, clear_bak=False):
 
     svc = read_service(svc_path)
     do_disable_service(svc.Name)
+    if (svc.get_service_active() == 'active'):
+        do_stop_service(svc.Name)
 
     svc_env_file = svc.EnvironmentFile
     if svc_env_file is not None:
