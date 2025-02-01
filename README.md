@@ -8,7 +8,7 @@ After deploying your application to server just run this tool to create systemd 
 ## Installation
 ```bash
 git clone https://github.com/CaCTuCaTu4ECKuu/systemd-net
-cd systemd-net/srv/bin
+cd systemd-net/src/bin
 chmod +x ./systemd-net.py
 ```
 
