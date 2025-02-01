@@ -10,6 +10,7 @@ After deploying your application to server just run this tool to create systemd 
 git clone https://github.com/CaCTuCaTu4ECKuu/systemd-net
 cd systemd-net/src/bin
 chmod +x ./systemd-net.py
+sudo python3 -m pip install tabulate
 ```
 
 ## Usage
@@ -19,14 +20,16 @@ Check `--help` to see avaliable parameters
 ```
 ### Create service
 ```bash
-sudo ./systemd-net.py -A -svc service_name -exec /www/App/AppName.dll --aspnetcore-urls http://+:5000
-
-./systemd-net.py -L
+sudo ./systemd-net.py add service_name /www/App/AppName.dll --aspnetcore-urls http://+:5000
 
 sudo systemctl enable netapp.service_name
 sudo systemctl start netapp.service_name
 ```
+### List registered services
+```bash
+./systemd-net.py list
+```
 ### Delete service
 ```bash
-sudo ./systemd-net.py -D netapp.service_name
+sudo ./systemd-net.py del service_name
 ```
